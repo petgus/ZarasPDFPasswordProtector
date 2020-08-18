@@ -64,9 +64,6 @@ namespace ZarasPDFPasswordProtector
 
             if (openFileDialog.ShowDialog() == true)
             {
-                // do something with the filename
-                //MessageBox.Show(openFileDialog.FileName);
-
                 _originalFile = new FileInfo(openFileDialog.FileName);
 
                 OriginalFilePath_Text.Text = _originalFile.Name;
