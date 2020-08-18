@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ZarasPDFPasswordProtector"
         mc:Ignorable="d"
-        Title="Zaras PDF Password Protector" Height="264" Width="800" ResizeMode="NoResize">
+        Title="Zaras PDF Password Protector" Height="241" Width="800" ResizeMode="NoResize">
     <Window.Resources>
         <Style x:Key="OpacityButtonHoverStyle" TargetType="{x:Type Button}">
             <Setter Property="OverridesDefaultStyle" Value="True"/>
@@ -34,23 +34,26 @@
         </Style>
 
     </Window.Resources>
-    <Grid Background="#FFE8622B" RenderTransformOrigin="0.499,0.477">
-        <Button Content="" ToolTip="Select a PDF file" Click="SelectFile" HorizontalAlignment="Left" Margin="117,65,0,0" VerticalAlignment="Top" RenderTransformOrigin="1,0.083" FontSize="20" Width="96" Height="96" BorderBrush="{x:Null}" Style="{StaticResource OpacityButtonHoverStyle}">
-            <Button.Background>
-                <ImageBrush ImageSource="Resources/pdf-page-folded-icon.png"/>
-            </Button.Background>
-        </Button>
-        <Label Content="*******" HorizontalAlignment="Center" Margin="342,54,337,0" VerticalAlignment="Top" FontSize="36" RenderTransformOrigin="0.429,0.5" Width="115" Foreground="White"/>
-        <Button Content="" ToolTip="Set password" Click="SetPassword" HorizontalAlignment="Left" Margin="602,65,0,0" VerticalAlignment="Top" FontSize="20" Width="96" Foreground="Black" Height="96" BorderBrush="{x:Null}" Style="{StaticResource OpacityButtonHoverStyle}">
-            <Button.Background>
-                <ImageBrush ImageSource="Resources/lock-folded-icon.png"/>
-            </Button.Background>
-        </Button>
-        <TextBox Name="PasswordBox" ToolTip="Choose a password" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="310,98,307,0" VerticalAlignment="Top" Width="177" Height="31" FontSize="14"/>
-        <TextBlock Name="OriginalFilePath_Text" HorizontalAlignment="Left" Margin="79,165,20,20" Text="" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14" />
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" AllowDrop="True" Drop="File_Drop">
+        <Grid Background="#FFE8622B" HorizontalAlignment="Center" VerticalAlignment="Center">
 
-        <TextBlock Margin="747,207,0,0"  HorizontalAlignment="Left" VerticalAlignment="Top">
-            <Hyperlink NavigateUri="https://github.com/petgus/ZarasPDFPasswordProtector" RequestNavigate="Hyperlink_RequestNavigate" Foreground="White">About</Hyperlink>
-        </TextBlock>
-    </Grid>
+            <Button Content="" ToolTip="Select a PDF file" Click="SelectFile" HorizontalAlignment="Left" Margin="113,65,0,0" VerticalAlignment="Top" RenderTransformOrigin="1,0.083" FontSize="20" Width="96" Height="96" BorderBrush="{x:Null}" Style="{StaticResource OpacityButtonHoverStyle}">
+                <Button.Background>
+                    <ImageBrush ImageSource="Resources/pdf-page-folded-icon.png"/>
+                </Button.Background>
+            </Button>
+            <Label Content="*******" HorizontalAlignment="Center" Margin="342,54,337,0" VerticalAlignment="Top" FontSize="36" RenderTransformOrigin="0.429,0.5" Width="115" Foreground="White"/>
+            <Button Content="" ToolTip="Set password" Click="SetPassword" HorizontalAlignment="Left" Margin="602,65,0,0" VerticalAlignment="Top" FontSize="20" Width="96" Foreground="Black" Height="96" BorderBrush="{x:Null}" Style="{StaticResource OpacityButtonHoverStyle}">
+                <Button.Background>
+                    <ImageBrush ImageSource="Resources/lock-folded-icon.png"/>
+                </Button.Background>
+            </Button>
+            <TextBox x:Name="PasswordBox" ToolTip="Choose a password" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="310,98,307,0" VerticalAlignment="Top" Width="177" Height="31" FontSize="14"/>
+            <TextBlock x:Name="OriginalFilePath_Text" HorizontalAlignment="Left" Margin="79,165,20,20" Text="" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14" />
+
+            <TextBlock Margin="740,178,0,0"  HorizontalAlignment="Left" VerticalAlignment="Top"><Hyperlink NavigateUri="https://github.com/petgus/ZarasPDFPasswordProtector" RequestNavigate="Hyperlink_RequestNavigate" Foreground="White"><Run Text="About"/></Hyperlink></TextBlock>
+
+
+        </Grid>
+    </StackPanel>
 </Window>

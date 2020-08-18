@@ -56,6 +56,11 @@ namespace ZarasPDFPasswordProtector
             document.Save(_originalFile.FullName.Replace(".pdf", "_protected.pdf"));
         }
 
+        private void SetCurrentFile(string fullPath)
+        {
+            _originalFile = new FileInfo(fullPath);
+            OriginalFilePath_Text.Text = _originalFile.Name;
+        }
 
         private void SelectFile(object sender, RoutedEventArgs e)
         {
@@ -66,9 +71,20 @@ namespace ZarasPDFPasswordProtector
 
             if (openFileDialog.ShowDialog() == true)
             {
-                _originalFile = new FileInfo(openFileDialog.FileName);
+                SetCurrentFile(openFileDialog.FileName);
+            }
+        }
+        
+        private void File_Drop(object sender, DragEventArgs e)
+        {
 
-                OriginalFilePath_Text.Text = _originalFile.Name;
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+            {
+                // Note that you can have more than one file.
+                string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+
+                // Assuming we have one file that you care about
+                SetCurrentFile(files[0]);
             }
         }
 
