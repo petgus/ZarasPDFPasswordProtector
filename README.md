@@ -3,7 +3,7 @@ A simple WPF application that allows you to add password protection to any PDF f
 
 ![Screenshot](./git-resources/screenshot.jpg)
 
-**[Download for Windows](https://github.com/petgus/ZarasPDFPasswordProtector/raw/master/download/ZarasPDFPasswordProtector_v1.0.zip)**
+**[Download installer for Windows](https://github.com/petgus/ZarasPDFPasswordProtector/raw/master/download/ZarasPDFPasswordProtector_v1.0.zip)**
 
 <br/><br/>
 This app was made possible thanks to the PDFsharp library http://www.pdfsharp.net/
