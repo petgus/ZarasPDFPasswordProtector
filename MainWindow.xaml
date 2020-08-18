@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ZarasPDFPasswordProtector"
         mc:Ignorable="d"
-        Title="Zaras PDF Password Protector" Height="241" Width="800" ResizeMode="NoResize">
+        Title="Zaras PDF Password Protector v.1.0" Height="241" Width="800" ResizeMode="NoResize">
     <Window.Resources>
         <Style x:Key="OpacityButtonHoverStyle" TargetType="{x:Type Button}">
             <Setter Property="OverridesDefaultStyle" Value="True"/>
@@ -52,7 +52,6 @@
             <TextBlock x:Name="OriginalFilePath_Text" HorizontalAlignment="Left" Margin="79,165,20,20" Text="" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14" />
 
             <TextBlock Margin="740,178,0,0"  HorizontalAlignment="Left" VerticalAlignment="Top"><Hyperlink NavigateUri="https://github.com/petgus/ZarasPDFPasswordProtector" RequestNavigate="Hyperlink_RequestNavigate" Foreground="White"><Run Text="About"/></Hyperlink></TextBlock>
-
 
         </Grid>
     </StackPanel>
