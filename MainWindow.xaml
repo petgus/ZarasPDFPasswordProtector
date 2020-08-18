@@ -7,13 +7,13 @@
         mc:Ignorable="d"
         Title="Zaras PDF Password Protector" Height="264" Width="800" ResizeMode="NoResize">
     <Grid Background="#FFE8622B">
-        <Button Content="" ToolTip="Select a PDF file" Click="SelectFile" HorizontalAlignment="Left" Margin="117,78,0,0" VerticalAlignment="Top" RenderTransformOrigin="1,0.083" FontSize="20" Width="72" Height="72" BorderBrush="{x:Null}">
+        <Button Content="" ToolTip="Select a PDF file" Click="SelectFile" HorizontalAlignment="Left" Margin="117,65,0,0" VerticalAlignment="Top" RenderTransformOrigin="1,0.083" FontSize="20" Width="96" Height="96" BorderBrush="{x:Null}">
             <Button.Background>
                 <ImageBrush ImageSource="Resources/pdf-page-folded-icon.png"/>
             </Button.Background>
         </Button>
         <Label Content="*******" HorizontalAlignment="Center" Margin="342,54,337,0" VerticalAlignment="Top" FontSize="36" RenderTransformOrigin="0.429,0.5" Width="115" Foreground="White"/>
-        <Button Content="" ToolTip="Set password" Click="SetPassword" HorizontalAlignment="Left" Margin="602,78,0,0" VerticalAlignment="Top" FontSize="20" Width="72" Foreground="Black" Height="72" BorderBrush="{x:Null}">
+        <Button Content="" ToolTip="Set password" Click="SetPassword" HorizontalAlignment="Left" Margin="602,65,0,0" VerticalAlignment="Top" FontSize="20" Width="96" Foreground="Black" Height="96" BorderBrush="{x:Null}">
             <Button.Background>
                 <ImageBrush ImageSource="Resources/lock-folded-icon.png"/>
             </Button.Background>
